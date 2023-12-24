@@ -19,7 +19,7 @@ Step 1 - Go to the repository you want to clone
 
 Step 2 - Click on the "**<> Code**" button and copy the HTTPS link(For this repo it would be https://github.com/bazuayelewis/financial_expenses.git)
 
-Step 3 - Go to git bash and run the command git clone https://github.com/ *username* / *repo_name*
+Step 3 - Go to git bash and run the command git clone https://github.com/ *username* / *repo_name*.git
 
 
 # How to run Code
