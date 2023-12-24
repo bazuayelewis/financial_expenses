@@ -26,7 +26,7 @@ class Expense:
         return dict(id = self.id, title = self.title, amount =self.amount, created_at = self.created_at, updated_at =self.updated_at)
    
     def __repr__(self):
-        return f"({self.id}, {self.title}, {self.amount}, {self.created_at}, {self.updated_at})"
+        return f"{self.id}, {self.title}, {self.amount}, {self.created_at}, {self.updated_at}"
 
 
 class ExpenseDatabase():
@@ -58,18 +58,8 @@ class ExpenseDatabase():
         if len(expense) == 0:
             return None
         else:
-            return expense[0]
+            return expense
 
     def to_dict(self):
         return [expense.to_dict() for expense in self.expenses]
 
-
-#Testing out the methods by creating dummy data and initalizing the classes
-if __name__ == "__main__":
-    test_1 = Expense("Test", 20.8)
-    test_2 = Expense("Lewis", 50)
-    test_3 = Expense("Feather", 9.57)
-    
-    edb = ExpenseDatabase()
-    for i in [test_1, test_2, test_3]:
-        edb.add_expense(i)
