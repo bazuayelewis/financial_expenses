@@ -4,7 +4,6 @@ from datetime import datetime, timezone
 
 
 class Expense:
-
 #Declaring the relevant attributes inside the constructor
     def __init__(self, title: str, amount: float):
         self.id = str(uuid.uuid4())
@@ -51,7 +50,7 @@ class ExpenseDatabase():
         if len(expense) == 0:
             return None
         else:
-            return expense[0]
+            return expense
         
     def get_expense_by_title(self, expense_title):
         expense = [expense for expense in self.expenses if expense.title == expense_title]
